@@ -1,0 +1,16 @@
+<table>
+<% @urls.each do |user| %>
+	<tr>
+		<th>Short URL</th>
+		<th>Long URL</th>
+	</tr>
+  <tr>
+    <td><%= link_to "http://url/r/"+user.short_url, url_path(user) %></td> 
+    <td><%= user.long_url %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+<br>
+<br>
+<%= link_to 'Create another link', new_url_path %>
